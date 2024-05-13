@@ -3,9 +3,10 @@
 ### Basic Git & Lecture Prep ###
 
 GIT - a tool we use to manage a project on your computer
+
 Github - a website that stores git repositories and can be managed online
 
-Git Basics Cheatsheet
+#### Git Basics Cheatsheet ####
 
 ```
 git init - creates a new repository
