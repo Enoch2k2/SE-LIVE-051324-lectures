@@ -2,3 +2,4 @@
 
 ### Basic Git & Lecture Prep ###
 
+Some text here
