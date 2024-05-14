@@ -1,4 +1,4 @@
-# Phase 1 Week 1
+# Phase 1 Week 1 Day 1
 
 ### Basic Git & Lecture Prep ###
 
@@ -178,4 +178,20 @@ NaN
 // greeting()
 
 // console.log('outside of greeting', name)
+```
+
+### Command Line Basics
+
+```
+. - current directory
+.. - parent directory
+cd path - change directory
+ls - list directory
+ls -lah - list our directories and their permissions
+mkdir folder_name - create directory
+touch file_name - create file
+rm file_name - remove file
+rm -r folder_name - remove folder and it's contents
+mv file_name /path/to/new_file_name - move file and rename
+mv file_name new_file_name - just rename file in current directory
 ```
