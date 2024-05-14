@@ -57,11 +57,13 @@ document - gives us the entire html document
 Helpful tips
 
 Mac
-`cmd + option + up/down arrow` - makes a verticle line of inputs so you can write multiples at one time.
+- `cmd + option + up/down arrow` - makes a verticle line of inputs so you can write multiples at one time.
+
 Windows
-`ctrl + alt + up/down arrow` - makes a verticle line of inputs so you can write multiples at one time.
+- `ctrl + alt + up/down arrow` - makes a verticle line of inputs so you can write multiples at one time.
 
 Mac
-`cmd + d` after highlighting a word or phrase, will highlight any reocurring instances of that word or phrase allowing you to edit all at once.
+- `cmd + d` after highlighting a word or phrase, will highlight any reocurring instances of that word or phrase allowing you to edit all at once.
+
 Windows
-`ctrl + d` after highlighting a word or phrase, will highlight any reocurring instances of that word or phrase allowing you to edit all at once.
+- `ctrl + d` after highlighting a word or phrase, will highlight any reocurring instances of that word or phrase allowing you to edit all at once.
