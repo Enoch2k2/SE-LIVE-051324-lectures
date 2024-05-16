@@ -129,3 +129,5 @@ After the first `.then` finishes, it will return another `promise` that will res
 ```
 
 This is when we access our `json` data that we parsed from the previous `resp.json()`. It gets passed in as an argument that we called `data` that in the callbac function we can do things with it. Such as create `li` tags and add it to our HTML.
+
+[HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
