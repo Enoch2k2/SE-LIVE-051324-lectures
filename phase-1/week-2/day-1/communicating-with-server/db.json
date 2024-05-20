@@ -1,0 +1,70 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Title 1",
+      "content": "Some Content 1",
+      "author": "Bob"
+    },
+    {
+      "id": 2,
+      "title": "Title 2",
+      "content": "Content 2",
+      "author": "Not Bob"
+    },
+    {
+      "id": 3,
+      "title": "Title 3",
+      "content": "Content 3",
+      "author": "Maybe Bob"
+    },
+    {
+      "title": "Title 4",
+      "content": "Content 4",
+      "author": "Most Definitely Bob",
+      "id": 4
+    },
+    {
+      "title": "Title 5",
+      "content": "Kind of Content",
+      "author": "Kind of Bob",
+      "id": 5
+    },
+    {
+      "title": "Title 6",
+      "author": "James Bob",
+      "content": "the spy that could be",
+      "id": 6
+    },
+    {
+      "title": "Title 7",
+      "content": "Bob's having a bad day!",
+      "author": "Super Bob",
+      "id": 7
+    },
+    {
+      "title": "Title 8",
+      "content": "Lives in the ocean under the sea.",
+      "author": "Sponge Bob",
+      "id": 8
+    },
+    {
+      "title": "Title 9",
+      "content": "Gotta start somewhere!",
+      "author": "Entry Level Bob",
+      "id": 9
+    },
+    {
+      "title": "Title 10",
+      "content": "Bob's mid level crisis.",
+      "author": "Mid Level Bob",
+      "id": 10
+    },
+    {
+      "title": "Title 11",
+      "content": "This has to be over 20 characters long, i'm definitely not goin to write 1024 characters in this little box, but 20 sounds like it should be just fine!",
+      "author": "Bob's Burgers",
+      "id": 11
+    }
+  ]
+}
