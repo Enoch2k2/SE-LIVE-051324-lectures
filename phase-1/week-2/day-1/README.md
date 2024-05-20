@@ -5,4 +5,4 @@ Agenda:
 * PATCH Request
 * Modifying the html after a patch request
 * DELETE Request
-* Modifyiing the html after a delete request
+* Modifying the html after a delete request
