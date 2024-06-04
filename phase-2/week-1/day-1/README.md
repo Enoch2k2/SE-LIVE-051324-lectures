@@ -1,10 +1,5 @@
-# Components & Props
+# State & Events
 
 ### Agenda
 
-* Vite
-* JSX & the virtual DOM
-* Components
-* Component Heirarchy
-* Props
-
+* 
