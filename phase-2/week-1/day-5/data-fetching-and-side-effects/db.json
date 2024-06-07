@@ -1,0 +1,40 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "How to pet a T-Rex",
+      "author": "Ben Eaten",
+      "content": "Tell it to sit-boy and approach it cautiously, it'll realize it wasn't hungry and let you pet it."
+    },
+    {
+      "id": 2,
+      "title": "Where did I leave the remote?",
+      "author": "Miss Motey",
+      "content": "Must be in the last place I left it."
+    },
+    {
+      "id": 3,
+      "title": "How to Swim",
+      "author": "Ivan Sinkin",
+      "content": "Just keep swimming, just keep swimming"
+    },
+    {
+      "title": "a",
+      "author": "a",
+      "content": "a",
+      "id": 4
+    },
+    {
+      "title": "b",
+      "author": "b",
+      "content": "b",
+      "id": 5
+    },
+    {
+      "title": "c",
+      "author": "c",
+      "content": "c",
+      "id": 6
+    }
+  ]
+}

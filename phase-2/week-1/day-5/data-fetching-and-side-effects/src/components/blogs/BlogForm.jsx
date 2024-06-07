@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { baseurl, headers } from '../../globals'
 
 const initialFormData = {
   title: "",
@@ -21,16 +22,28 @@ const BlogForm = ({ addBlog }) => {
     setFormData(newFormData)
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    // add the object to our list of objects
-    // we don't have to get the inputs
-    // we don't have to create an object with the inputs
-    // BAM it's already there!
 
-    addBlog(formData)
-    
+    const resp = await fetch(baseurl + "/blogs", {
+      method: "POST",
+      headers,
+      body: JSON.stringify(formData)
+    })
+    const data = await resp.json()
+    addBlog(data)
     setFormData(initialFormData)
+    
+    // fetch(baseurl + "/blogs", {
+    //   method: "POST",
+    //   headers,
+    //   body: JSON.stringify(formData)
+    // })
+    //   .then(resp => resp.json())
+    //   .then(data => {
+    //     addBlog(data)
+    //     setFormData(initialFormData)
+    //   })
   }
 
   return (

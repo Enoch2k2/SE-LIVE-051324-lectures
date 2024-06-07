@@ -1,11 +1,11 @@
 import {useState} from 'react'
 
-const Search = ({ searchTerm }) => {
+const Search = ({ setSearchTerm }) => {
   const [term, setTerm] = useState("")
 
   function handleChange(e) {
     setTerm(e.target.value)
-    searchTerm(e.target.value)
+    setSearchTerm(e.target.value)
   }
 
   return (

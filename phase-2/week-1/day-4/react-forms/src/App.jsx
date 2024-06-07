@@ -5,22 +5,19 @@ import BlogList from './components/blogs/BlogList'
 
 function App() {
   const [blogs, setBlogs] = useState(data)
-  const [viewedBlogs, setViewedBlogs] = useState(data)
+  const [searchTerm, setSearchTerm] = useState("")
 
   function addBlog(blog){
     setBlogs([...blogs, blog])
   }
 
-  function searchTerm(term) {
-    const filteredBlogs = blogs.filter(blog => blog.title.toLowerCase().includes(term.toLowerCase()))
-    setViewedBlogs(filteredBlogs)
-  }
+  const viewedBlogs = blogs.filter(blog => blog.title.toLowerCase().includes(searchTerm.toLowerCase()))
 
   return (
     <div>
       <h1>React Forms</h1>
       <BlogForm addBlog={ addBlog } />
-      <BlogList blogsLength={blogs.length} blogs={ viewedBlogs } searchTerm={searchTerm} />
+      <BlogList blogsLength={blogs.length} blogs={ viewedBlogs } setSearchTerm={setSearchTerm} />
     </div>
   )
 }
