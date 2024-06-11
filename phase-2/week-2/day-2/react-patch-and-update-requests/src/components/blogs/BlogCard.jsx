@@ -1,8 +1,11 @@
 import { useEffect} from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useOutletContext } from 'react-router-dom'
 import { baseurl } from '../../globals'
 
 const BlogCard = ({ blog, deleteBlog }) => {
+
+  const ctx = useOutletContext()
+  console.log(ctx)
 
   async function handleDelete() {
     const options = { method: "DELETE" }

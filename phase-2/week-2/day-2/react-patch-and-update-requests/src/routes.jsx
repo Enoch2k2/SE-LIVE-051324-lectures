@@ -1,4 +1,5 @@
 import App from "./App";
+import SomeComponent from "./components/SomeComponent";
 import BlogForm from "./components/blogs/BlogForm";
 import BlogList from "./components/blogs/BlogList";
 import EditBlogForm from "./components/blogs/EditBlogForm";
@@ -11,7 +12,13 @@ export default [
     children: [
       {
         path: "/blogs",
-        element: <BlogList />
+        element: <BlogList />,
+        children: [
+          {
+            path: "/blogs/some-component",
+            element: <SomeComponent />
+          }          
+        ]
       },
       {
         path: "/blogs/new",

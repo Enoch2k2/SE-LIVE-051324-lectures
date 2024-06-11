@@ -5,15 +5,10 @@ import { baseurl, headers } from '../../globals'
 const EditBlogForm = () => {
   // how do we get the id? useParams
   const { id } = useParams()
-  const [blog, setBlog] = useState({})
-  const { updateBlog } = useOutletContext()
+  const { updateBlog, blogs } = useOutletContext()
+  const data = blogs.find(blog => blog.id === parseInt(id))
+  const [blog, setBlog] = useState(data)
   const navigate = useNavigate()
-
-  async function getBlog() {
-    const resp = await fetch('http://localhost:3000/blogs/' + id)
-    const data = await resp.json()
-    setBlog(data)
-  }
 
   function handleChange(e) {
     setBlog({
@@ -35,14 +30,9 @@ const EditBlogForm = () => {
     navigate("/blogs")
   }
 
-  useEffect(() => {
-    getBlog()
-  }, [])
+  // useEffect(() => {
 
-  if(!blog.id) {
-    return <h1>Loading</h1>
-  }
-
+  // }, [])
 
   return (
     <div>
