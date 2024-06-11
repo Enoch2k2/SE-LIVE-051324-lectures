@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
-import BlogForm from './components/blogs/BlogForm'
-import BlogList from './components/blogs/BlogList'
-
 import { baseurl } from './globals'
+import { Outlet } from 'react-router-dom'
+import Navbar from './components/navigation/Navbar'
 
 function App() {
   const [blogs, setBlogs] = useState([])
@@ -36,10 +35,6 @@ function App() {
     getBlogs()
   }, [])
 
-  useEffect(() => {
-    console.log('hi from the term useEffect', term)
-  }, [term])
-
   if(term === "All") {
     viewedBlogs = blogs;
   } else {
@@ -51,9 +46,9 @@ function App() {
   } else {
     return (
       <div>
+        <Navbar />
         <h1>Data Fetching & Side Effects</h1>
-        <BlogForm addBlog={ addBlog } />
-        <BlogList blogsLength={blogs.length} blogs={ viewedBlogs } setTerm={setTerm} term={term} deleteBlog={deleteBlog} />
+        <Outlet context={{ addBlog, blogsLength: blogs.length, blogs: viewedBlogs, setTerm, term, deleteBlog }} />
       </div>
     )
   }

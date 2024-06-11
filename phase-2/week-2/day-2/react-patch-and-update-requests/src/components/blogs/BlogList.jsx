@@ -1,10 +1,11 @@
 import React from 'react'
 import BlogCard from './BlogCard'
 import Search from '../filtering/Search'
+import { useOutletContext } from 'react-router-dom'
 
-const BlogList = ({ blogs, setTerm, blogsLength, term, deleteBlog }) => {
+const BlogList = () => {
 
-  console.log('hi from BlogList!')
+  const { blogs, setTerm, blogsLength, term, deleteBlog } = useOutletContext()
 
   const blogCards = blogs.map((blog) => <BlogCard key={ blog.id } blog={ blog }  deleteBlog={deleteBlog} />)
 
