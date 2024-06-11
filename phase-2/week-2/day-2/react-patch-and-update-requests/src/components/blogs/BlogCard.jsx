@@ -1,11 +1,12 @@
 import { useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
+import { baseurl } from '../../globals'
 
 const BlogCard = ({ blog, deleteBlog }) => {
 
   async function handleDelete() {
     const options = { method: "DELETE" }
-    await fetch('http://localhost:3000/blogs/' + blog.id, options)
+    await fetch(baseurl + '/blogs/' + blog.id, options)
     deleteBlog(blog.id)
   }
 

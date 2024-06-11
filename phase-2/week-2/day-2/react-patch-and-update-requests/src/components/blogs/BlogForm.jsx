@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import { baseurl, headers } from '../../globals'
+import { useNavigate, useOutletContext } from 'react-router-dom'
 
 const initialFormData = {
   title: "",
@@ -7,8 +8,10 @@ const initialFormData = {
   content: ""
 }
 
-const BlogForm = ({ addBlog }) => {
+const BlogForm = () => {
   const [formData, setFormData] = useState(initialFormData)
+  const { addBlog } = useOutletContext()
+  const navigate = useNavigate()
 
   function handleChange(event) {
     // determine which part of the state's object to update
@@ -33,6 +36,7 @@ const BlogForm = ({ addBlog }) => {
     const data = await resp.json()
     addBlog(data)
     setFormData(initialFormData)
+    navigate("/blogs")
     
     // fetch(baseurl + "/blogs", {
     //   method: "POST",

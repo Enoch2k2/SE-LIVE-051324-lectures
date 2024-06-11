@@ -18,6 +18,18 @@ function App() {
     setBlogs(filteredBlogs)
   }
 
+  function updateBlog(updatedBlog) {
+    const updatedBlogs = blogs.map(blog => {
+      if(blog.id === updatedBlog.id) {
+        return updatedBlog
+      } else {
+        return blog
+      }
+    })
+
+    setBlogs(updatedBlogs)
+  }
+
   async function getBlogs() {
     const response = await fetch(baseurl + "/blogs")
     const data = await response.json()
@@ -48,7 +60,7 @@ function App() {
       <div>
         <Navbar />
         <h1>Data Fetching & Side Effects</h1>
-        <Outlet context={{ addBlog, blogsLength: blogs.length, blogs: viewedBlogs, setTerm, term, deleteBlog }} />
+        <Outlet context={{ addBlog, blogsLength: blogs.length, blogs: viewedBlogs, setTerm, term, deleteBlog, updateBlog }} />
       </div>
     )
   }

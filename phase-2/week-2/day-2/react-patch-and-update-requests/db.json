@@ -2,7 +2,7 @@
   "blogs": [
     {
       "id": 1,
-      "title": "How to pet a T-Rex",
+      "title": "How to pet a Raptor",
       "author": "Ben Eaten",
       "content": "Tell it to sit-boy and approach it cautiously, it'll realize it wasn't hungry and let you pet it."
     },
@@ -17,6 +17,12 @@
       "title": "How to Swim",
       "author": "Ivan Sinkin",
       "content": "Just keep swimming, just keep swimming"
+    },
+    {
+      "title": "Some Title",
+      "author": "Some Author",
+      "content": "Some Content",
+      "id": 4
     }
   ]
 }
