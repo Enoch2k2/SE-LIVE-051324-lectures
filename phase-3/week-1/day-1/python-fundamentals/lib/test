@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+### ^ Shebang Line
+
+def greet():
+  print('hello world')
+
+greet()
