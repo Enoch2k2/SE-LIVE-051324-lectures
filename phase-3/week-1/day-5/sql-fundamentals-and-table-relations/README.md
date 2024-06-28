@@ -9,12 +9,12 @@
 - Tables
   - Columns
   - Primary Keys
-- ALTER
+- ALTER Table
 - Insert
   - Table Rows
-- DELETE
-- Update
-- Table Relations
+- DELETE Rows (WHERE)
+- Update Rows
+- Table Relationships
   - belongs to / has many
     - erd diagrams
     - foreign keys
