@@ -34,11 +34,11 @@ class Cli:
 
   def list_owners(self):
     print("-----")
-    for owner in Owner.all:
-      print(f'ID: {owner.id}. NAME: {owner.name}')
+    for owner_id, owner in Owner.all.items():
+      print(f'ID: {owner_id}. NAME: {owner.name}')
       print("Pets of owner:")
-      for pet in owner.pets:
-        print(f"- ID: {pet.id} NAME: {pet.name} SPECIES: {pet.species }")
+      for pet_id, pet in owner.pets.items():
+        print(f"- ID: {pet_id} NAME: {pet.name} SPECIES: {pet.species }")
       print("-----")
     print("")
     self.menu()
@@ -53,8 +53,8 @@ class Cli:
 
   def list_pets(self):
     print("-----")
-    for pet in Pet.all:
-      print(f'ID: {pet.id}. NAME: {pet.name} SPECIES: {pet.species}')
+    for pet_id, pet in Pet.all.items():
+      print(f'ID: {pet_id}. NAME: {pet.name} SPECIES: {pet.species}')
       print(f"owner: ID: {pet.owner.id} NAME: {pet.owner.name}")
       print("-----")
     print("")
@@ -62,10 +62,20 @@ class Cli:
 
   def create_pet(self):
     owner_id = input("Type in ID of owner: ")
-    owner = next(iter([owner for owner in Owner.all if owner.id == int(owner_id)]), None)
-    name = input("Type in name of pet: ")
-    species = input("Type in species of pet: ")
-    pet = Pet.create(name=name, species=species, owner=owner)
-    print("Pet successfully created!")
-    print("")
+    try:
+      int_owner_id = int(owner_id)
+      owner = Owner.all.get(int_owner_id)
+    except:
+      print("owner not found")
+      print("")
+      return self.menu()
+    if owner:
+      name = input("Type in name of pet: ")
+      species = input("Type in species of pet: ")
+      pet = Pet.create(name=name, species=species, owner=owner)
+      print("Pet successfully created!")
+      print("")
+    else:
+      print("owner not found")
+      print("")
     self.menu()
