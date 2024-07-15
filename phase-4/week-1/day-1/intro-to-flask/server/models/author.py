@@ -1,0 +1,12 @@
+from config import db
+
+class Author(db.Model):
+  __tablename__ = "authors"
+
+  id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String)
+
+  books = db.relationship("Book", back_populates="author")
+
+  def __repr__(self):
+    return f'<Author id={self.id} name={self.name}>'
